@@ -1,263 +1,149 @@
-
-*{padding:0 ;margin: 0; box-sizing: border-box;}
-
-.container
-{
-    width: 1200px;
-    margin: auto;
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.container2
-{
-    display: inline-flex;
-    
-}
+
 .header
 {
-    width: 1200px;
+    width: 100%;
     height: 70px;
-    background-color: rgb(50, 50, 50);
-    text-align:center;
-    position: fixed;
-    color: white;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.header ul
-{
-    list-style: none;
-    display: inline-block;
-}
-
-.header ul li
-{
-    display: inline-block;
-    line-height: 70px;
-}
-html
-{
-    scroll-padding-top: 90px;
-    scroll-behavior: smooth;
-}
-.header ul li a
-{
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0px 50px;
-}
-
-.header ul li:hover
-{
-    background-color: goldenrod;
-    
-}
-
-.banner
-{
-    width: 1200px;
-    height: 920px;
-    background-image: url('./assests/banner.jpg');
-    margin-top: 80px;
-    margin-bottom: 15px;
+    background-color: darkslategrey;
     display: flex;
-    background-position: center;
-    background-size: cover;
-   
-}
-.sec1
-{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    text-align: center;
-    display: inline-block;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    align-items: center ;
+    position: fixed;
 }
-.p1
-{
-    width:22%;
-    height: 250px ;
-    border-radius: 50%;
-    background-image: url(./assests/f1.jpg);
-    float: left;
-    margin-left: 25px;
-    background-repeat: no-repeat;
+
+.header img{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
 }
-.p2
-{
-    width:22%;
-    height: 250px ;
-    border-radius: 50%;
-    background-image: url(./assests/m3.jpg);
-    float: left;
-    margin-left: 25px;
-    background-repeat: no-repeat;
-}
-.p3
-{
-    width:22%;
-    height: 250px ;
-    border-radius: 50%;
-    background-image: url(./assests/m4.jpg);
-    float: left;
-    margin-left: 25px;
-    background-repeat: no-repeat;
-}
-.p4
-{
-    width:22%;
-    height: 250px ;
-    border-radius: 50%;
-    background-image: url(./assests/m2.jpg);
-    float: left;
-    margin-left: 25px;
-}
-.sec2
-{
-    width: 100%;
-    height: 500px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
-}
-.left
-{   width: 48%;
-    height: 80%;
-    margin-right: 4%;
-    float: left;
-    
-    
-}
-.right
-{
-    width: 48%;
-    height: 80%;
-    
-    float: right;
-    text-align: center;
-}
-.a1
-{
-    width: 100%;
-    height: 28%;
-    margin-bottom: 5.8%;
-    background-image: url(./assests/p1.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-}
-.a2
-{
-    width: 100%;
-    height: 28%;
-    margin-bottom: 5.8%;
-    background-image: url(./assests/p2.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-}
-.a3
-{
-    width: 100%;
-    height: 28%;
-    margin-bottom: 5.8%;
-    background-image: url(./assests/p3.jpg);
-    background-position:center;
-    background-size:cover;
-    text-align: center;
-}
-.maincontent
-{
-    width: 100%;
-    height: 400px;
-    background-color:grey;
-    margin-bottom: 10px;
-    padding: 20px;
-    text-align: justify;
+
+.header h1{
+    line-height: 70px;
     color: white;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
+     
 }
-.sec3
-{
-    width: 1200px;
-    height: 350px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 290px;
-    
-}
-.sec5
-{
-    width: 1200px;
-    display: inline-flex;
-
-}
-.box
-{
-    width: 300px;
-    background-color: white;
-    overflow: hidden;
-    border: 2px solid grey;
-    box-shadow: 0px 7px 7px darkgrey;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 17px;
-    text-align: justify;
-}
-
-.box img
+.content
 {
     width: 100%;
-    border-radius: 10px;
-    height: 170px;
+    padding: 20px;
+    transition: .7s;
 }
-.box h3
+.content img
 {
-    text-align: center;
-    margin: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    max-width:700px ;
+    display: block;
+    margin: auto;
+}
+.content p
+{
+    text-align:justify;
 }
 
-.mybutton
+.sidebar
+{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: darkslategrey;
+    left: -100%;
+    transition: .7s;
+}
+
+.sidebar ul{
+    list-style: none;
+    
+
+}
+.sidebar ul li
+{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    
+}
+.sidebar ul li a
 {
     display: block;
-    margin-top: 30px;
     text-decoration: none;
-    text-align: center;
-    color:white;
+    color:  white;
+    font-size: 20px;
+    padding: 15px 25px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: red;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    
+    transition: .4s;
+
 }
-.mybutton:hover
+
+a i
 {
-    background-color: blue;
+    margin-right: 15px;
 }
-.sec4
+.sidebar ul li a:hover
 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    border-left: 10px solid white;
 }
-.footer
+
+.social
 {
-    width: 100%;
-    height: 90px;
-    background-color: plum;
-    margin-top: 10px;
-    text-align: center;
-    padding-top: 30px;
-    color: solid black;
-    font-size: larger;
-    
+    margin-top:250px ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+i
+{
+    font-size: 30px;
+    color: white;
+}
+
+.show-btn , .hide-btn
+{
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+
+}
+
+.hide-btn
+{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar
+{
+    left: 0;
+
+}
+#chk:checked ~ .show-btn
+{
+    opacity: 0;
+
+}
+#chk:checked ~ .hide-btn
+{
+    opacity: 1;
+
+}
+#chk:checked ~ .content
+{
+    width: 80%;
+
+}
+
+@media(max-width:768px)
+{
+    .sidebar{
+        width: 100%;
+        text-align: center;
+    }
+    .header h1{
+        display: none;
+    }
 }
